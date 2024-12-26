@@ -1,0 +1,30 @@
+//LINEAR SEARCH OF AN ARRAY
+#include<stdio.h>
+int main()
+{
+    int a[5], i, search, found, j, indx;
+    printf("Enter the elements of array : ");
+    for (i=0; i<5; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("Search the element : ");
+    scanf("%d", &search);
+
+    for(j=0; j<5; j++)
+    {
+       if(a[j]==search)
+       {
+        indx = j;
+        found = search; break;
+       }
+    }
+    if(search == found)
+    {
+        printf("element %d found at index %d",found, indx);
+    }
+    else
+    printf("element %d not found in the array",search);
+
+    return 0;
+}
